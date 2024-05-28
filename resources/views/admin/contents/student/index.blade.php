@@ -5,7 +5,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"></li>
-                <li class="breadcrumb-item active">Courses</li>
+                <li class="breadcrumb-item active">Student</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
