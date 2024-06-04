@@ -10,4 +10,7 @@ class Courses extends Model
     use HasFactory;
 
     protected $table = 'courses';
+    
+    // mendefinisikan kolom yang boleh diisi
+    protected $fillable = ['name', 'category', 'desc'];
 }
