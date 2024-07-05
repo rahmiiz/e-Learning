@@ -36,12 +36,12 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // route untuk menampilkan halaman student
-    Route::get('admin/student', [StudentController::class, 'index']);
+    Route::get('admin/student', [StudentController::class, 'index'])->middleware('admin');
 
     Route::get('admin/courses', [CoursesController::class, 'index']);
 
     // route untuk menampilkan halaman form tambah student
-    Route::get('admin/student/create', [StudentController::class, 'create']);
+    Route::get('admin/student/create', [StudentController::class, 'create'])->middleware('admin');
 
     // route untuk mengirim data student baru 
     Route::post('admin/student/store', [StudentController::class, 'store']);
@@ -58,7 +58,7 @@ Route::middleware('auth')->group(function () {
     // COURSES
 
     // route untuk menampilkan halaman form tambah courses
-    Route::get('admin/courses/create', [CoursesController::class, 'create']);
+    Route::get('admin/courses/create', [CoursesController::class, 'create'])->middleware('admin');
 
     // route untuk mengirim data courses baru 
     Route::post('admin/courses/store', [CoursesController::class, 'store']);
